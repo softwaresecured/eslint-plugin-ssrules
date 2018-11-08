@@ -1,11 +1,12 @@
 {
   "name": "eslint-plugin-ssrules",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A collection of security rules for JavaScript",
   "keywords": [
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "security"
   ],
   "author": "Jeremy Buis",
   "main": "lib/index.js",

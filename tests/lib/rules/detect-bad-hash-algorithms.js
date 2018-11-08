@@ -8,7 +8,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-var rule = require('../../../lib/rules/bad-hash-algorithm');
+var rule = require('../../../lib/rules/detect-bad-hash-algorithms');
 
 var RuleTester = require('eslint').RuleTester;
 
@@ -17,7 +17,7 @@ var RuleTester = require('eslint').RuleTester;
 // ------------------------------------------------------------------------------
 
 var ruleTester = new RuleTester();
-ruleTester.run('bad-hash-algorithm', rule, {
+ruleTester.run('detect-bad-hash-algorithms', rule, {
 
     valid: [
 

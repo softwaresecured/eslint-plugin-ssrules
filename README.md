@@ -36,14 +36,14 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "ssrules/bad-hash-algorithm": 2
+        "ssrules/detect-bad-hash-algorithms": 2
     }
 }
 ```
 
 ## Supported Rules
 
-- ssrules/bad-hash-algorithm - Checks for use of md5 and sha1
+- ssrules/detect-bad-hash-algorithms - Checks for use of md5 and sha1
 
 
 

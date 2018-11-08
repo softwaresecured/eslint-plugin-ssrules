@@ -1,4 +1,4 @@
-# Checks for the use of bad hashing algorithms that have been shown to collide (bad-hash-algorithm)
+# Checks for the use of bad hashing algorithms that have been shown to collide (detect-bad-hash-algorithm)
 
 Please describe the origin of the rule here.
 
@@ -11,7 +11,7 @@ Examples of **incorrect** code for this rule:
 
 ```js
 
-// fill me in
+crypto.createHash('md5').update(data).digest('hex')
 
 ```
 
@@ -19,7 +19,7 @@ Examples of **correct** code for this rule:
 
 ```js
 
-// fill me in
+crypto.createHash('sha512').update(data).digest('hex')
 
 ```
 
