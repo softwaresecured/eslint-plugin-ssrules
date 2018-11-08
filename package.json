@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-ss",
+  "name": "eslint-plugin-ssrules",
   "version": "0.0.0",
   "description": "A collection of security rules for JavaScript",
   "keywords": [
@@ -10,13 +10,18 @@
   "author": "Jeremy Buis",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "mocha tests --recursive",
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softwaresecured/eslint-plugin-ssrules.git"
   },
   "dependencies": {
-    "requireindex": "~1.1.0"
+    "requireindex": "^1.2.0"
   },
   "devDependencies": {
-    "eslint": "~3.9.1",
+    "eslint": "^5.8.0",
     "mocha": "^5.2.0"
   },
   "engines": {
