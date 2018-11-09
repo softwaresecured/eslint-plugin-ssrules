@@ -23,7 +23,7 @@ ruleTester.run('detect-bad-hash-algorithms', rule, {
 
         // give me some code that won't trigger a warning
         {
-            code: 'crypto.createHash(\'sha512\').update(data).digest(\'hex\')',
+            code: 'crypto.createHash(\'sha3-224\').update(data).digest(\'hex\')',
             errors: [{
                 message: 'Fill me in.',
                 type: 'Me too'
@@ -31,7 +31,15 @@ ruleTester.run('detect-bad-hash-algorithms', rule, {
         },
 
         {
-            code: 'crypto.createHash(\'sha256\').update(data).digest(\'hex\')',
+            code: 'crypto.createHash(\'sha3-256\')',
+            errors: [{
+                message: 'Fill me in.',
+                type: 'Me too'
+            }]
+        },
+
+        {
+            code: 'require(\'crypto\').createHash(\'sha3-384\')',
             errors: [{
                 message: 'Fill me in.',
                 type: 'Me too'
@@ -49,6 +57,22 @@ ruleTester.run('detect-bad-hash-algorithms', rule, {
         },
         {
             code: 'crypto.createHash(\'sha1\').update(data).digest(\'hex\')',
+            errors: [{
+                message: 'SHA1 is a weak hash algorithm with collisions.',
+                type: 'CallExpression'
+            }]
+        },
+
+        {
+            code: 'require(\'crypto\').createHash(\'sha1\').update(data).digest(\'hex\')',
+            errors: [{
+                message: 'SHA1 is a weak hash algorithm with collisions.',
+                type: 'CallExpression'
+            }]
+        },
+
+        {
+            code: 'crypto.createHash(\'sha1\')',
             errors: [{
                 message: 'SHA1 is a weak hash algorithm with collisions.',
                 type: 'CallExpression'
